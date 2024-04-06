@@ -2,9 +2,4 @@
 import "@hotwired/turbo-rails";
 import "controllers";
 
-console.log("loaded");
-
-function closeDiv() {
-  const div = document.getElementById("main");
-  console.log("close");
-}
+console.log("application.js loaded");

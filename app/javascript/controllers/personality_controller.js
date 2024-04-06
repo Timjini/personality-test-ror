@@ -22,8 +22,4 @@ export default class extends Controller {
 
     label.classList.add("selected");
   }
-
-  handleRadioClick(event) {
-    console.log("clicked");
-  }
 }
