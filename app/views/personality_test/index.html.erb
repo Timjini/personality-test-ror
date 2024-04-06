@@ -1,6 +1,12 @@
 
 <div class="flex flex-col gap-10">
-    <h1 class="text-4xl text-center"> Personality Test</h1>
-    <p> Are you inclined towards extraversion or do you find comfort in introversion?</p>
-    <%= link_to "Start", clear_session_and_cache_path,class:"actionBtn text-center" %>
+    <% if !session[:personality_result].nil?%>
+            <h1 class="text-4xl text-center"> Personality Test</h1>
+            <p class="text-center"> Thank you for participating</p>
+            <%= link_to "Would you like to take the test again?", clear_session_and_cache_path,class:"actionBtn text-center" %>
+        <%else%>
+            <h1 class="text-4xl text-center"> Personality Test</h1>
+            <p class="text-center"> Are you inclined towards extraversion or do you find comfort in introversion?</p>
+            <%= link_to "Start", clear_session_and_cache_path,class:"actionBtn text-center" %>
+    <%end%>
 </div>

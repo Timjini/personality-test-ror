@@ -1,4 +1,4 @@
-<div class="hidden lg:block mt-10">
+<div class="hidden lg:block mt-20">
     <ol class="relative text-gray-500 border-s border-gray-200 dark:border-gray-700 dark:text-gray-400">                  
         <% info.each_with_index do |i, index|%>
             <% if !i.nil? && session[:step] == index || session[:step] > index%>
@@ -9,7 +9,7 @@
                         </svg>
                     </span>
                     <h3 class="font-medium leading-tight"><%=i[0, 11]...%></h3>
-                    <p class="text-sm"></p>
+                    <p class="text-sm">Step <%=index +1 %></p>
                 </li>
                 <%else%>
                 <li class="mb-10 ms-6">

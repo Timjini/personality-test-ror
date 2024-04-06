@@ -4,7 +4,7 @@ module PersonalityTestHelper
         questions = [
             "Being around people makes me feel...",
             "To prepare for a night out...",
-            "When given a choice between working as part of a team or working as a group, I would prefer to...",
+            "Teamwork or group work: which do I prefer?",
             "What's your idea of the perfect date?",
             "During parties or social gatherings, I tend to..."
         ]
