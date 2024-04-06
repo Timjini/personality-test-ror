@@ -1,5 +1,5 @@
 /* MOBILE AND TABLET VIEWS */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1020px) {
     body{
         /* background-color: aqua; */
     }
@@ -12,7 +12,7 @@
     }
 
     /* sidebar */
-    .sidebar{width: 100vw;top:0;}
+    .sidebar{width: 100vw;top:0;height:150px}
     /* Form styling */
     .questions-container{
         padding:5rem;

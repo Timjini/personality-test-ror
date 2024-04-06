@@ -39,8 +39,8 @@
   /* App Layout grid */
   .playground {
     display: grid;
-    grid-template-areas: "side content content content content";
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;gap: 10px; 
+    grid-template-areas: "side content content content";
+    grid-template-columns: 1fr 1fr 1fr 1fr;gap: 10px; 
     border-radius: 20px;
     overflow: hidden;
     height:100dvh;
@@ -83,3 +83,5 @@
     padding-top:3rem;
     padding-bottom:3rem;
   }
+  .current-step{background-color: var(--primary);color:var(--bg)}
+  .next-step{background-color: var(--bg);}

@@ -1,8 +1,17 @@
 <aside class="sidebar">
     <div class="sidebar-content">
         <div class="sidebar-header">
-            <%= image_tag ('personality-test-logo.png'), class: "h-12 w-auto" %>
-           Introvert or Extrovert
+         <%= link_to clear_session_and_cache_path do %>
+            <%= image_tag 'personality-test-logo.png', class: "h-12 w-auto" %>
+        <% end %>
+
+        <%if personality_sidebar_info %>
+        <%new_step = session[:step] + 1 %>
+        <div class="m-4 w-96 bg-gray-200 rounded-full dark:bg-gray-200  sm:block md:block lg:hidden">
+            <div class="bg-amber-900 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: <%=new_step * 20%>%">  <%= new_step.to_i %>/<%=personality_sidebar_info.length.to_i%></div>
+        </div>
+        <%=render 'components/progress_bar', info: personality_sidebar_info%>
+        <%end%>
             <p></p>
         </div>
         
