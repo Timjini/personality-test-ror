@@ -1,0 +1,32 @@
+##TODO list
+#requirements
+1- 3 to 5 different questions
+2- personality trait result Introvert or Extrovert.
+
+
+#questions 
+1- Being around people makes me feel...
+a - Energized for awhile, but there are times when I'd rather be alone.
+b - A bit exhausted. Being around others can be draining.
+c - Like I'm alive!
+
+2- To prepare for a night out...
+a- I get all my friends together to plan where we'll dance the night away.
+b- Prepare? My friends have to drag me out most nights.
+c- Call a few of my closest friends to see what they're planning.
+
+3- When given a choice between working as part of a team or working as a group, I would prefer to...
+a - Work by myself.
+b - Work with as many people as possible.
+c - Work as part of a small group.
+
+4 - What's your idea of the perfect date?
+a - Something quiet and intimate like watching a movie together on the couch.
+b - A live concert surrounded by other screaming fans.
+c - Dinner at a nice restaurant followed by a show.
+
+5 - During parties or social gatherings, I tend to...
+a - Spend time with a few people that I know. It's about quality not quantity.
+b - Keep to myself. You can find me planted on the wall or by the punch bowl.
+c - Talk to as many people as I can. I've been called a social butterfly.
+

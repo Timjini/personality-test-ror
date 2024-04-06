@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ :root {
+    --bg: #F8F4F3;
+    --eggshell:#fff;
+    --text: #2B1B10;
+    --primary:#FD8727;
+    --secondary: #4E3531;
+    --accent: #B4A8A0;
+    --shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
+    --hover: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --font: "Poppins", sans-serif;
+  }
+  
+  body{
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  
+  h1{
+    color:var(--secondary);
+  }
+
+
+  /* App Layout grid */
+  .playground {
+    display: grid;
+    grid-template-areas: "side content content content content";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;gap: 10px; 
+    border-radius: 20px;
+    overflow: hidden;
+    height:100dvh;
+  }
+  .sidebar {grid-area:side;background-color: var(--eggshell);}
+  .main {grid-area:content;overflow-y: auto;height:100dvh;}
+
+  /* Form Styling */
+
+  .main{
+    padding:5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .question-container h3{width:35rem;}
+  .question-container{margin-bottom: 2rem;gap:15px;}
+  .option-container{display:flex;justify-content:center;flex-direction: row;}
+  .option{box-sizing: border-box;display:flex;flex-direction:row;height:14rem;width:14rem;background-color: var(--eggshell);padding:1.2rem;margin-top:1rem;}
+  .option:hover{background-color: var(--accent);cursor: pointer;}
+  .selected{background-color:var(--secondary); border:1px solid var(--accent);color:var(--eggshell)}
+
+  /* BUTTONS */
+  .actionBtn{background-color: var(--text);color:var(--eggshell);border-radius: 5px; padding: 10px 20px 10px 20px; min-width: 100px;cursor: pointer;}
+  .previous-button{background-color: var(--eggshell);color:var(--accent);border-radius: 5px; padding: 10px 20px 10px 20px; min-width: 100px;cursor: pointer;}
+  .next-button{background-color: var(--secondary);color:var(--eggshell);border-radius: 5px; padding: 10px 20px 10px 20px; min-width: 100px;cursor: pointer;}
+  .actionBtn:hover{background-color: var(--primary);}
+  .next-button:hover{background-color: var(--primary);}
+  .previous-button:hover{background-color: var(--accent);color:var(--eggshell)}
+
+
+
+  /* SIDE BAR */
+  .sidebar-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding-top:3rem;
+    padding-bottom:3rem;
+  }

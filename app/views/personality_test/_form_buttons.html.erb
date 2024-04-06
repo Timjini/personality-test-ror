@@ -1,0 +1,9 @@
+
+  <div class="flex flex-row justify-between px-4">
+<%= link_to "Previous", personality_test_path(session: session[:step], back: true), class: "previous-button  p-4 text-center" unless session[:step].zero? %>
+  <% if session[:step] == @questions.length - 1 %>
+    <%= form.submit "Send", class:"actionBtn" %>
+  <%else%>
+    <%= form.submit "Next", class:"next-button p-4 text-center"%>
+  <% end %>
+  </div>

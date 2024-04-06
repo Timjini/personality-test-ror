@@ -1,0 +1,18 @@
+<!-- personality_test/index.html.erb -->
+<%= session[:step].inspect%>
+<%= form_with url: personality_test_result_path, method: :post do |form| %>
+  <div data-controller="personality" id="data-question-<%= @question %>" class="question-container flex flex-col items-center">
+    <h3 class="text-2xl font-bold text-center"><%= @question %></h3>
+    <div class="option-container m-2">
+      <% @options[session[:step]].each_with_index do |option, option_index| %>
+        <label class="flex option justify-center items-center text-truncate rounded-lg shadow-sm mr-4" data-index="<%= option_index %>" data-option="<%= option_index %>" >
+          <span class="select-<%= option_index %> text-center font-bold"><%= option %></span>
+        <%= form.radio_button :option, option_index, checked: option_index.zero?, style: "display: none;", class: "option-radio"%>
+        <input name="selected_option" type="hidden" value="<%= option_index %>" />
+        </label>
+      <% end %>
+    </div>
+  </div>
+  <%=render 'personality_test/form_buttons' , questions:  @questions , form: form %>
+
+<% end %>
