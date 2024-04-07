@@ -5,9 +5,12 @@
     <div class="option-container m-2">
       <% @options[session[:step]].each_with_index do |option, option_index| %>
         <label class="flex option justify-center items-center text-truncate rounded-lg shadow-sm mr-4 " data-index="<%= option_index %>" data-option="<%= option_index %>" >
+        <% if option_index.zero? %>
+          <span class="absolute  mb-32 lg:mb-56 bg-orange-500 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded" id="badge">Selected</span>
+        <% end %>
+          <span class="hidden absolute  mb-32 lg:mb-56 bg-orange-500 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded" id="badge">Selected</span>
           <span class="select-<%= option_index %> text-center font-bold"><%= option %></span>
         <%= form.radio_button :option, option_index, checked: option_index.zero?, style: "display: none;", class: "option-radio"%>
-        <input name="selected_option" type="hidden" value="<%= option_index %>" />
         </label>
       <% end %>
     </div>

@@ -34,7 +34,10 @@ class PersonalityTestController < ApplicationController
   def result
     initiate
 
+    puts "params?????????????????????????? #{params}"
+
     if !session[:step].nil? && session[:step] < @questions.length - 1
+      puts"-------------------------------#{params[:option]}"
       next_step
     else
       scores = personality_test_score_mapping

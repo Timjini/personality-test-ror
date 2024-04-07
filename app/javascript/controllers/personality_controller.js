@@ -20,6 +20,10 @@ export default class extends Controller {
       label.classList.remove("selected");
     });
 
+    const badge = document.getElementById("badge");
+    if (dataIndex === "1" || dataIndex === "2") {
+      badge.classList.add("hidden");
+    }
     label.classList.add("selected");
   }
 }
