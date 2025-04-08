@@ -58,8 +58,8 @@
   }
 
   /* Form Styling */
-  .question-container h3{width:35rem;}
-  .question-container{margin-bottom: 2rem;gap:15px;}
+  .questionnaire-container h3{width:35rem;}
+  .questionnaire-container{margin-bottom: 2rem;gap:15px;}
   .option-container{display:flex;justify-content:center;flex-direction: row;}
   .option{box-sizing: border-box;display:flex;flex-direction:row;height:14rem;width:14rem;background-color: var(--eggshell);padding:1.2rem;margin-top:1rem;}
   .option:hover{background-color: var(--accent);cursor: pointer;}

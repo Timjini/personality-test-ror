@@ -24,7 +24,7 @@ class PersonalityTestController < ApplicationController
       initiate
       if !params[:session]
         session[:step] -= 1 unless session[:step].zero?
-        # remove selected option
+        # remove selected option from array
         session[:options_selected].pop
         redirect_to personality_test_path(session: session[:step])
       end
@@ -34,10 +34,7 @@ class PersonalityTestController < ApplicationController
   def result
     initiate
 
-    puts "params?????????????????????????? #{params}"
-
     if !session[:step].nil? && session[:step] < @questions.length - 1
-      puts"-------------------------------#{params[:option]}"
       next_step
     else
       scores = personality_test_score_mapping
@@ -52,22 +49,15 @@ class PersonalityTestController < ApplicationController
 
   def next_step
     session[:step] += 1
-
-      # Get the selected option
       selected_option = params[:option].to_i
-
-      # Save answers to array
+      # push answer to array
       session[:options_selected] << selected_option
 
-      puts "--------#{session[:options_selected]}------------"
-
-      # Move to next question
       redirect_to personality_test_path(session: session[:step])
   end
 
   def last_step(scores)
     session[:options_selected] << params[:option].to_i
-    # return in case of error a flash message would be appropriate
       if scores[0].length != session[:options_selected].length
         puts "Error: Mismatched lengths between questions and scores , #{scores.inspect}"
         return

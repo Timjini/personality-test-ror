@@ -1,27 +1,27 @@
-# README
+# 🧠 Personality Test App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A lightweight Rails app that lets users take a quick personality quiz and instantly see their results — no database required.
 
-Things you may want to cover:
+## 🛠️ Tech Stack
 
-* Ruby version
+- **Ruby on Rails** (Sessions + Rails Cache)
+- **StimulusJS** (for frontend interactivity)
 
-* System dependencies
+## 💡 How It Works
 
-* Configuration
+- The app shows a series of simple questions using Stimulus controllers.
+- User answers are stored in the **Rails session**.
+- Once completed, the app calculates the result and caches it using **Rails.cache**.
+- No sign-up, no storage — just fast and ephemeral.
 
-* Database creation
+## 📸 Screenshot
 
-* Database initialization
+![App Screenshot](/personality-test.png)
 
-* How to run the test suite
+## 🧪 Ideal For
 
-* Services (job queues, cache servers, search engines, etc.)
+- Quick personality or preference quizzes
+- MVP testing
+- Session-based apps without persistent storage
 
-* Deployment instructions
-
-* ...
-# personality-test
-# personality-test
-# personality-test-ror
+---
