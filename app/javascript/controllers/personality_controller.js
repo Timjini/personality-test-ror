@@ -13,6 +13,7 @@ export default class extends Controller {
 
   handleLabelClick(event) {
     const label = event.currentTarget;
+    console.log("label", label);
     const dataIndex = label.dataset.index;
     const dataOption = label.dataset.option;
 

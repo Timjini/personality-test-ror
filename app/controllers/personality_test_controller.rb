@@ -3,6 +3,7 @@ class PersonalityTestController < ApplicationController
   include PersonalityTestScoreHelper
 
   def index
+    redirect_to personality_test_path(session: 0)
   end
 
   def clear_session_and_cache
